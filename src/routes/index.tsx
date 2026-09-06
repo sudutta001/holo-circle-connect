@@ -84,6 +84,12 @@ function formatDuration(seconds: number | null) {
   return `${minutes}m ${rest}s`;
 }
 
+function Avatar({ profile, className = "", textClass = "text-2xl", tone = "bg-sky" }: { profile: { display_name: string; avatar_url: string | null }; className?: string; textClass?: string; tone?: string }) {
+  if (profile.avatar_url) {
+    return <img src={profile.avatar_url} alt={`${profile.display_name}'s photo`} className={`avatar-ink rounded-full object-cover ${className}`} />;
+  }
+  return <div className={`avatar-ink ${tone} flex items-center justify-center rounded-full font-display ${textClass} ${className}`}>{(profile.display_name[0] ?? "?").toUpperCase()}</div>;
+}
 
 
 const demoProfiles: Profile[] = [
