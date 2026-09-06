@@ -1,0 +1,4 @@
+- [ ] Add member messaging and WebRTC signaling schema with secure access rules
+- [ ] Rebuild the app into linked Home, Discover, My People, Inbox, Profile, and Room screens
+- [ ] Seed member profiles and connect auth/social actions to real backend data
+- [ ] Validate the published flow, security state, and publish the app
