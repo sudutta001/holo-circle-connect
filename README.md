@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Remix of Remix of Remix of Remix of Connect Global
+
+create a networking app which will have video call like feature, profile maker but my theme is like the same as it as the reference image, donot change anything, just make the same as it as the reference image uploaded, also the app will have the connection ,followers,following making feature, it is a globally networking app
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://holo-circle-connect.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/05230a09-f8cc-4acd-9a26-9ea8e0026ceb).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
