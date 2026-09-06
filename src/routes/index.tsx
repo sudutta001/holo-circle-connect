@@ -204,13 +204,15 @@ function Index() {
       const { data } = await supabase.from("profiles").insert(fallbackProfile).select().single();
       if (data) setMyProfile(data as Profile);
     }
-    if (profilesResult.data && profilesResult.data.length > 0) setProfiles(profilesResult.data as Profile[]);
-    if (followsResult.data) setFollowing(followsResult.data.map((row) => row.following_id));
+    if (profilesResult.data) setProfiles(profilesResult.data as Profile[]);
+    setFollowing(followsResult.data ? followsResult.data.map((row) => row.following_id) : []);
     if (connectionsResult.data) {
       setConnectionRecords(connectionsResult.data as ConnectionRecord[]);
       setConnections(connectionsResult.data.filter((row) => row.status === "accepted").map((row) => row.requester_id === userId ? row.addressee_id : row.requester_id));
+    } else {
+      setConnectionRecords([]);
+      setConnections([]);
     }
-    if (messagesResult.data) setMessages(messagesResult.data as Message[]);
   };
 
   const logCallStart = useCallback(async (connectionId: string, remoteId: string) => {
