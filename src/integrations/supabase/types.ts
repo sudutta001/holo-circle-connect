@@ -106,6 +106,7 @@ export type Database = {
           connection_id: string
           created_at: string
           id: string
+          read_at: string | null
           recipient_id: string
           sender_id: string
         }
@@ -114,6 +115,7 @@ export type Database = {
           connection_id: string
           created_at?: string
           id?: string
+          read_at?: string | null
           recipient_id: string
           sender_id: string
         }
@@ -122,6 +124,7 @@ export type Database = {
           connection_id?: string
           created_at?: string
           id?: string
+          read_at?: string | null
           recipient_id?: string
           sender_id?: string
         }
