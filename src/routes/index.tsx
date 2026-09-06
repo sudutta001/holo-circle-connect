@@ -213,6 +213,7 @@ function Index() {
       setConnectionRecords([]);
       setConnections([]);
     }
+    setMessages(messagesResult.data ? (messagesResult.data as Message[]) : []);
   };
 
   const logCallStart = useCallback(async (connectionId: string, remoteId: string) => {
