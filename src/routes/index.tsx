@@ -289,10 +289,12 @@ function Index() {
     }
     const isFollowing = following.includes(profile.id);
     if (isFollowing) {
-      await supabase.from("follows").delete().eq("follower_id", session.user.id).eq("following_id", profile.id);
+      const { error } = await supabase.from("follows").delete().eq("follower_id", session.user.id).eq("following_id", profile.id);
+      if (error) { setNotice("Could not unfollow just now. Try again."); return; }
       setFollowing((current) => current.filter((id) => id !== profile.id));
     } else {
-      await supabase.from("follows").insert({ follower_id: session.user.id, following_id: profile.id });
+      const { error } = await supabase.from("follows").insert({ follower_id: session.user.id, following_id: profile.id });
+      if (error) { setNotice("Could not follow just now. Try again."); return; }
       setFollowing((current) => [...current, profile.id]);
     }
   };
