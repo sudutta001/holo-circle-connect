@@ -572,7 +572,7 @@ function DashboardView({ profile, session, profiles, connections, connectionReco
     <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
       <div>
         <div className="font-mono text-[10px] uppercase tracking-[0.16em]">your corner</div>
-        <h1 className="hand-title mt-1 text-6xl">hello, {profile.display_name.split(" ")[0]}.</h1>
+        <h1 className="hand-title mt-1 text-6xl">hello, {session ? (profile.display_name.split(" ")[0] || "friend") : "friend"}.</h1>
         <p className="mt-2 max-w-md text-xs leading-5">A quick look at your people, your messages and the time you've spent face to face.</p>
       </div>
       {session
